@@ -51,9 +51,9 @@ if (config.env === 'production') {
 }
 
 // eslint-disable-next-line prefer-template
-app.use(express.static(process.cwd() + '/public'));
+app.use(express.static(process.cwd() + '/dist/voguel-banking'));
 // eslint-disable-next-line prefer-template
-app.get('/angular', (req, res) => res.sendFile(process.cwd() + '/public/index.html'));
+app.get('/angular', (req, res) => res.sendFile(process.cwd() + '/dist/voguel-banking/index.html'));
 
 // v1 api routes
 app.use('/api/v1', routes);
